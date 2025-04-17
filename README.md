@@ -19,3 +19,14 @@ powershell -command "1..10 | % {Write-Host $_; Start-Sleep -Seconds 1}"
 
 # Sample Photo
 ![Sample Photo of WebsocketCommandTerminal](https://github.com/user-attachments/assets/212fba48-db98-4ce2-b063-655e56b3d547 "A sample photo of the WebsocketCommandTerminal webpage.")
+
+# How It Works
+The backend uses Node.js with Socket.IO to establish a WebSocket connection that streams command output in real-time. 
+
+When a command is executed, the server spawns a child process and pipes its stdout/stderr through the WebSocket connection to connected clients/browsers!!!
+
+The frontend is built with Vite and uses the Socket.IO client library to establish the connection and display incoming command output in real-time in the browser window.
+
+My goal was that this setup enables live streaming of command output **without** needing to wait for the command to complete or relying on polling mechanisms. 
+
+So... The WebSocket connection ensures minimal latency between command execution and output display, making it feel like you're running the command directly in a terminal!!!
