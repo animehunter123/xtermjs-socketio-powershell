@@ -19,6 +19,8 @@
   --success-color: #a6e3a1;
   --error-color: #f38ba8;
   --info-color: #89dceb;
+  --help-color: #fab387;
+  --history-color: #cba6f7;
 }
 
 body {
@@ -133,6 +135,14 @@ h1 {
 .info {
   color: var(--info-color);
   font-style: italic;
+}
+
+.help {
+  color: var(--help-color);
+}
+
+.history {
+  color: var(--history-color);
 }
 
 @media (max-width: 768px) {
