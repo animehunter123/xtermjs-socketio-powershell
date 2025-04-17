@@ -1,5 +1,5 @@
 # Description
-WebsocketCommandTerminal: A proof of concept frontend/backend that you can indeed stream the results of a command like below directly seeing the live updates in your browser
+WebsocketCommandTerminal: A proof of concept frontend/backend that you can indeed stream the results of a command like below directly seeing the live updates in your browser. **This is NOT SAFE FOR PRODUCTION, NEVER USE IT IN PRODUCTION.**
 
 ```powershell
 powershell -command "1..10 | % {Write-Host $_; Start-Sleep -Seconds 1}"
