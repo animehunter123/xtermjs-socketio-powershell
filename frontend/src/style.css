@@ -1,0 +1,146 @@
+:root {
+  font-family: 'Fira Code', 'Cascadia Code', 'Source Code Pro', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #1e1e1e;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --terminal-bg: #1e1e2e;
+  --terminal-text: #cdd6f4;
+  --terminal-border: #313244;
+  --command-color: #89b4fa;
+  --success-color: #a6e3a1;
+  --error-color: #f38ba8;
+  --info-color: #89dceb;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--terminal-bg);
+  color: var(--terminal-text);
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--terminal-text);
+}
+
+#app {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.terminal-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70vh;
+  background-color: var(--terminal-bg);
+  border-radius: 8px;
+  border: 1px solid var(--terminal-border);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.terminal-output {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: var(--terminal-bg);
+  color: var(--terminal-text);
+  font-family: 'Fira Code', monospace;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+.command-form {
+  display: flex;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--terminal-border);
+}
+
+.command-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 4px 0 0 4px;
+  color: var(--terminal-text);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.command-input:focus {
+  outline: none;
+}
+
+.submit-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #313244;
+  color: var(--terminal-text);
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #45475a;
+}
+
+.output-line {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.command {
+  color: var(--command-color);
+  font-weight: bold;
+}
+
+.success {
+  color: var(--success-color);
+}
+
+.error {
+  color: var(--error-color);
+}
+
+.info {
+  color: var(--info-color);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .terminal-container {
+    height: 60vh;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
